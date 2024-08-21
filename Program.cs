@@ -30,6 +30,7 @@ namespace CSAdv31
     }
     internal class Program
     {
+
         static void Main(string[] args)
         {
             Wanted<string> wantedString = new Wanted<string>("string");
@@ -45,6 +46,20 @@ namespace CSAdv31
             Console.WriteLine(sc[11]);
             Console.WriteLine(sc[40]);
             sc[3] = 4;
-        }
+
+            //out 키워드
+            Console.WriteLine("숫자 입력:");
+            int output;
+            bool result = int.TryParse(Console.ReadLine(), out output);
+            if (result)
+            {
+                Console.WriteLine("입력한 숫자:" + output);
+            }
+            else
+            {
+                Console.WriteLine("숫자를 입력해주세요");
+            }
+
+    }
     }
 }
